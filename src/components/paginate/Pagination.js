@@ -5,7 +5,7 @@ import "./Pagination.css";
 
 function Pagination({ page, setPage, loading }) {
 	const [index, setIndex] = useState(page);
-	const [total, setTotal] = useState(1000);
+	const [total, setTotal] = useState(500);
 	const [indexForNumbers, setIndexForNumbers] = useState(index);
 	const [indexIsTotal, setIndexIsTotal] = useState(() => {
 		return indexForNumbers === total ? true : false;
@@ -20,7 +20,9 @@ function Pagination({ page, setPage, loading }) {
 	};
 
 	const next = () => {
-		if (loading) return;
+		if (loading) {
+			return <h1>Loading..</h1>
+		} 
 		if (index < total) {
 			setIndex(index + 1);
 			if (index + 5 < total) {
@@ -64,7 +66,7 @@ function Pagination({ page, setPage, loading }) {
 						<>
 							{indexForNumbers - 2 <= total && indexForNumbers - 2 > 0 && (
 								<button
-									className={index == indexForNumbers - 2 ? "active" : ""}
+									className={index === indexForNumbers - 2 ? "active" : ""}
 									onClick={(e) => handleBtn(e)}
 									disabled={loading}
 								>
@@ -73,7 +75,7 @@ function Pagination({ page, setPage, loading }) {
 							)}
 							{indexForNumbers - 1 <= total && indexForNumbers - 1 > 0 && (
 								<button
-									className={index == indexForNumbers - 1 ? "active" : ""}
+									className={index === indexForNumbers - 1 ? "active" : ""}
 									onClick={(e) => handleBtn(e)}
 								>
 									{indexForNumbers - 1}
@@ -81,7 +83,7 @@ function Pagination({ page, setPage, loading }) {
 							)}
 							{indexForNumbers <= total && (
 								<button
-									className={index == indexForNumbers ? "active" : ""}
+									className={index === indexForNumbers ? "active" : ""}
 									onClick={(e) => handleBtn(e)}
 								>
 									{indexForNumbers}
@@ -89,7 +91,7 @@ function Pagination({ page, setPage, loading }) {
 							)}
 							{indexForNumbers + 1 <= total && (
 								<button
-									className={index == indexForNumbers + 1 ? "active" : ""}
+									className={index === indexForNumbers + 1 ? "active" : ""}
 									onClick={(e) => handleBtn(e)}
 								>
 									{indexForNumbers + 1}
@@ -97,7 +99,7 @@ function Pagination({ page, setPage, loading }) {
 							)}
 							{indexForNumbers + 2 <= total && (
 								<button
-									className={index == indexForNumbers + 2 ? "active" : ""}
+									className={index === indexForNumbers + 2 ? "active" : ""}
 									onClick={(e) => handleBtn(e)}
 								>
 									{indexForNumbers + 2}
