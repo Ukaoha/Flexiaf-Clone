@@ -12,16 +12,15 @@ export const AppContextProvider = ({ children }) => {
 	const fetchUser = async () => {
 		setLoading(true);
 		try {
-			// setTimeout(async () => {
 			let URL = `https://randomuser.me/api/?page=${page}&results=10&seed=jspsp`;
 			let response = await axios.get(URL);
 			setData(response.data.results);
 			setLoading(false);
 			console.log(response.data.results);
-			// }, 5000);
+			
 		} catch (error) {
 			setData([]);
-			setError(error);
+			setError("failed to fetch");
 			setLoading(false);
 		}
 	};

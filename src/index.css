@@ -62,6 +62,7 @@ body {
 .home{
 
   background-color: #eff7ff;
+
   height: 100vh;
 }
 .hero-container{
@@ -110,4 +111,45 @@ body {
 
 
 }     
+.about{
+  margin: 20px auto;
+  text-align: center;
+}
+.about input{
+  width: 40%;
+  padding: 0.75rem;
+  border-color: #2752db;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 30px;
 
+}
+.nav-about a{
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #05224b;
+}
+
+.customers h2{
+  margin-top: 20px;
+  color: #05224b;
+}
+.customers p {
+  margin-top: 20px;
+  color: #05224b;
+
+}
+.products{
+  margin-top: 20px;
+  color: #05224b;
+
+}
+.products ul {
+  margin-top: 20px;
+  color: #05224b;
+
+}
+.products ul li{
+margin-top: 15px;
+}

@@ -13,7 +13,7 @@ const Navbar = () => {
             {/* <className="links"> */}
             <li className="toggle-bar"><i className="fas fa-bars" id="btn"></i></li>
   
-               <li className="nav-item"><Link to="/home">Home</Link></li>
+               <li className="nav-item"><Link to="/">Home</Link></li>
                <li className="nav-item"> <Link to="/about">About</Link></li>
                <li className="nav-item"> <Link to="/learn">Learn </Link></li>
                <li className="nav-item"> <Link to="/users">Users </Link></li>
