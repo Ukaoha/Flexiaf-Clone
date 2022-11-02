@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import Pagination from "../paginate/Pagination";
-import "./ListUsers.css";
+import "./ListUsers.css";  
 
 export default function ListUsers() {
 	const { data, page, setPage, loading } = useContext(AppContext);

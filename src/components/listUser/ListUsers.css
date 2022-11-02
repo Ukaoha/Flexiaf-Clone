@@ -1,5 +1,5 @@
 .list-users {
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 	position: relative;
 	top: 4rem;
@@ -38,7 +38,7 @@
 	align-items: center;
 	gap: 10px;
 }
- .item-p p{
+ .list-item .item-p p{
 	color: blue;
 }
 
